@@ -9,17 +9,21 @@
 import UIKit
 import Alamofire
 
-protocol ControllerConfig: class {
-    var barRootView: Bool { get }
-    var rootView: Bool { get }
-    var title: String { get }
+struct ControllerConfig {
+    var rootView: Bool
+    var title: String
+
+    init(title: String, rootView: Bool) {
+        self.title = title
+        self.rootView = rootView
+    }
 }
 
 class BaseViewController: UIViewController {
 
     var params: AnyObject?;
     var errorHandler: ErrorHandler!
-    weak var config: ControllerConfig?;
+    var config: ControllerConfig?;
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +47,7 @@ class BaseViewController: UIViewController {
             navBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
             if let cfg = self.config {
                 self.navigationItem.title = cfg.title
-                if (!cfg.barRootView && !cfg.rootView) {
+                if (!cfg.rootView) {
                     self.navigationItem.setLeftBarButtonItem(createUiBarButtonItem("leftBarBtn", selector: "navLeftBarTouched:"), animated: false)
                 }
                 //TODO show tools

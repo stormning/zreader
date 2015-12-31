@@ -16,21 +16,7 @@ class HomeController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        super.configure({
-            class cfg:ControllerConfig{
-                var barRootView: Bool {
-                    return false
-                }
-                var rootView: Bool {
-                    return false
-                }
-                var title: String {
-                    return ""
-                }
-
-            }
-            return cfg()
-        }())
+        super.configure(ControllerConfig(title: "首页", rootView: true))
         banner = PagedImageScrollView(frame: CGRectMake(0, self.navigationController!.navigationBar.frame.size.height, view.frame.width, 100))
         banner.configure(view, ratio: 0.3, items:
         ImageItem(url: "http://h.hiphotos.baidu.com/news/q%3D100/sign=1ea4b7c29b82d158bd825db1b00b19d5/dcc451da81cb39db7950567ad7160924ab18300d.jpg", link: ""),
