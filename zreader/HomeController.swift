@@ -10,13 +10,28 @@
 import UIKit
 
 
-class HomeController: UIViewController {
+class HomeController: BaseViewController {
 
     var banner: PagedImageScrollView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        banner = PagedImageScrollView(frame: CGRectMake(0, 0, view.frame.width, 100))
+        super.configure({
+            class cfg:ControllerConfig{
+                var barRootView: Bool {
+                    return false
+                }
+                var rootView: Bool {
+                    return false
+                }
+                var title: String {
+                    return ""
+                }
+
+            }
+            return cfg()
+        }())
+        banner = PagedImageScrollView(frame: CGRectMake(0, self.navigationController!.navigationBar.frame.size.height, view.frame.width, 100))
         banner.configure(view, ratio: 0.3, items:
         ImageItem(url: "http://h.hiphotos.baidu.com/news/q%3D100/sign=1ea4b7c29b82d158bd825db1b00b19d5/dcc451da81cb39db7950567ad7160924ab18300d.jpg", link: ""),
                 ImageItem(url: "http://a.hiphotos.baidu.com/news/q%3D100/sign=9aa6ab14def9d72a1164141de42b282a/b90e7bec54e736d1afc443239c504fc2d46269c2.jpg", link: ""),
@@ -31,5 +46,7 @@ class HomeController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func prepareViewModel() {
 
+    }
 }

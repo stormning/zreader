@@ -95,7 +95,7 @@ class PagedImageScrollView: UIView, UIScrollViewDelegate {
     }
 
     func configure(container: UIView, ratio: Double, items: ImageItem...) {
-        self.scrollView.frame = CGRectMake(0, 0, container.frame.size.width, container.frame.size.width * CGFloat(ratio))
+        self.scrollView.frame = CGRectMake(container.frame.origin.x, container.frame.origin.y, container.frame.size.width, container.frame.size.width * CGFloat(ratio))
         container.addSubview(self)
         self.items = items
     }

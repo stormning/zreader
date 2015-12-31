@@ -15,7 +15,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="uar-Rr-ezo" kind="relationship" relationship="viewControllers" id="KMP-yG-nmg"/>
+                        <segue destination="bqT-wn-NOC" kind="relationship" relationship="viewControllers" id="05E-3x-N1R"/>
                         <segue destination="rOs-H5-bMk" kind="relationship" relationship="viewControllers" id="3Gf-8s-V58"/>
                         <segue destination="Ldr-QH-zqF" kind="relationship" relationship="viewControllers" id="Zov-gW-wDW"/>
                     </connections>
@@ -23,6 +23,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LHa-ma-YrE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2171" y="881"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="eBE-Ew-pT3">
+            <objects>
+                <navigationController id="bqT-wn-NOC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="lw8-X5-3Xm"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jPI-gX-UxX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="5Vn-nC-IJG">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="x1j-tj-V0K" kind="relationship" relationship="rootViewController" id="LNf-pf-r82"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MyE-1D-Nol" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-893" y="67"/>
+        </scene>
+        <!--Home Controller-->
+        <scene sceneID="1q1-hU-YX8">
+            <objects>
+                <viewController id="x1j-tj-V0K" customClass="HomeController" customModule="zreader" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Umm-of-mSH"/>
+                        <viewControllerLayoutGuide type="bottom" id="WVt-f0-zDy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KON-fi-vGR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qmr-gn-WYa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ErB-6A-vf7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="204" y="67"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="Isj-aq-1Nq">
@@ -52,25 +92,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BBJ-DA-42D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="223" y="834"/>
-        </scene>
-        <!--Home-->
-        <scene sceneID="ZfJ-9h-uoz">
-            <objects>
-                <viewController title="Home" id="uar-Rr-ezo" customClass="HomeController" customModule="zreader" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="vDZ-Ej-XkS"/>
-                        <viewControllerLayoutGuide type="bottom" id="xBG-Oe-MbM"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="wtH-Xf-E1D">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="首页" id="GGX-aJ-22v"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CbX-ki-Acc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-901" y="79"/>
         </scene>
         <!--BookStore-->
         <scene sceneID="g5i-1X-DSS">
